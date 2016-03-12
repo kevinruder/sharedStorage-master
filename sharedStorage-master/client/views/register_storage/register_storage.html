@@ -1,0 +1,20 @@
+<template name="RegisterStorage">
+    <div id="registration_form" class="container">
+    {{#autoForm collection="RegisterStorage" id="insertStorage" type="insert"}}
+        <fieldset>
+            <legend>Please fill out the following information</legend>
+            {{> afQuickField name='Name'}}
+            {{> afQuickField name='Address'}}
+            {{> afQuickField name='Lat'}}
+            {{> afQuickField name='Long'}}
+            {{> afQuickField name='Space' rows=6}}
+            {{> afQuickField name='Price' rows=3}}
+            <p>Recommended price based on your location: {{recommendedPrice}}</p>
+            <p>How long do you wish to rent out your storage ?</p>
+            {{> afQuickField name='Start'}}
+            {{> afQuickField name='End'}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Insert</button>
+    {{/autoForm}}
+    </div>
+</template>
